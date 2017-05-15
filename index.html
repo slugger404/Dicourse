@@ -1,1 +1,21 @@
-Hello World!
+<html>
+<head>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+</head>
+<body>
+	<div ng-app="discourse" ng-controller="discourse_rss">
+		<span>{{rss_feed}}</span>
+	</div>
+	<script>
+		var app = angular.module('discourse', []);
+		app.controller('discourse_rss', function($scope, $http) {
+			$http.get("http://discourseofhumanevents.libsyn.com/rss")
+		    .then(function(response) {
+		    	$scope.rss_feed=response.data;
+		    });
+		});		
+		</script>
+</body>
+</html>
