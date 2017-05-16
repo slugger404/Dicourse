@@ -16,7 +16,7 @@
 	<script>
 		var app = angular.module('discourse', ['ngSanitize']);
 		app.controller('discourse_rss', function($scope, $http) {
-			$http.get("http://discourseofhumanevents.libsyn.com/rss")
+			$http.get("https://discourseofhumanevents.libsyn.com/rss")
 		    .then(function(response) {
 		    	var x2js = new X2JS();
 		    	var xml = response.data;
