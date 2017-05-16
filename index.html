@@ -2,18 +2,25 @@
 <head>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-
+<script src="https://rawgit.com/abdmob/x2js/master/xml2json.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.6.4/angular-sanitize.min.js"></script>
 </head>
 <body>
 	<div ng-app="discourse" ng-controller="discourse_rss">
-		<span>{{rss_feed}}</span>
+		<div ng-repeat="episode in rssJson.rss.channel.item">
+			<h3>{{episode.title}}</h3>
+			<h4>{{episode.subtitle}}</h2>
+			<p ng-bind-html="episode.description"></p>
+		</div>
 	</div>
 	<script>
-		var app = angular.module('discourse', []);
+		var app = angular.module('discourse', ['ngSanitize']);
 		app.controller('discourse_rss', function($scope, $http) {
 			$http.get("http://discourseofhumanevents.libsyn.com/rss")
 		    .then(function(response) {
-		    	$scope.rss_feed=response.data;
+		    	var x2js = new X2JS();
+		    	var xml = response.data;
+		    	$scope.rssJson = x2js.xml_str2json(xml);		    	
 		    });
 		});		
 		</script>
