@@ -9,6 +9,11 @@
 				<span class='episodeHosts'>With {{episode.subtitle}} </span>
 				<p ng-bind-html="episode.description"></p>
 				<br />
+				<audio controls='controls' class='episodeAudio'>
+					<source src="http://traffic.libsyn.com/discourseofhumanevents/Discourse{{episode.number}}.mp3" type="audio/ogg">
+					<source src="horse.mp3" type="audio/mpeg">
+					Your browser does not support the audio element.
+				</audio>
 			</div>
 		</div>
 	</div>
