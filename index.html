@@ -1,18 +1,22 @@
 <html>
 <head>
-<script
-	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-<script src="https://rawgit.com/abdmob/x2js/master/xml2json.min.js"></script>
+
+<!-- Angular JS Libraries -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.6.4/angular-sanitize.min.js"></script>
+
+<!-- Internal JS Libraries -->
 <script src="discourse.js"></script>
+
+
+<!-- Other External JS Libraries -->
+<script src="https://rawgit.com/abdmob/x2js/master/xml2json.min.js"></script>
+
+
+
+
 </head>
-<body>
-	<div ng-app="discourse" ng-controller="discourse_rss">
-		<div ng-repeat="episode in recentEpisodes">
-			<h3>{{episode.number}}. {{episode.title}}</h3>
-			<h4>{{episode.subtitle}}</h2>
-			<p ng-bind-html="episode.description"></p>
-		</div>
-	</div>
+<body ng-app="discourse" ng-controller="discourse_rss">
+	<div ng-include="'body.html'"></div>
 </body>
 </html>

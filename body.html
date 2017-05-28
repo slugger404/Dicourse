@@ -1,0 +1,9 @@
+<div >
+	<div ng-repeat="episode in recentEpisodes">
+		<h3>{{episode.number}}. {{episode.title}}</h3>
+		<h4>
+			{{episode.subtitle}}
+			</h2>
+			<p ng-bind-html="episode.description"></p>
+	</div>
+</div>
