@@ -30,7 +30,7 @@ app.controller('discourse_rss', function($scope, $http) {
 			applyEpisodeNumberAdjustment(episode);			 
 			addRecentEpisodesAdjustment($scope, episode, i, $scope.episodes.length);
 			stripBoilerPlate(episode);
-			
+			fixDate(episode);
 		}
 
 	}
@@ -51,6 +51,11 @@ app.controller('discourse_rss', function($scope, $http) {
 		episode.description = episode.description.split("itunes.apple")[0];
 		var n = episode.description.lastIndexOf('<p><a href');
 		episode.description = episode.description.substring(0, n);
+	}
+	
+	function fixDate(episode){
+		episode.releaseDate = new Date(episode.pubDate);
+		
 	}
 
 });
