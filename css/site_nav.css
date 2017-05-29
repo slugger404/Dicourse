@@ -1,0 +1,54 @@
+.site_nav{
+	margin-top: 3.5em;
+	margin-left: 2em;
+}
+
+.nav_title{
+	text-align: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	bottom: .8em;
+	font-size: 2.1em;
+	font-weight: 900;
+	color: #9d0000;
+	text-decoration: underline;
+}
+
+.nav_card {
+	/* Add shadows to create the "card" effect */
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	transition: 0.3s;
+	background-color: white;
+	border-radius: 1em;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+}
+
+/* On mouse-over, add a deeper shadow */
+.nav_card:hover {
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Add some padding inside the card container */
+.nav_container {
+	position: relative;
+	bottom: 1em;
+	left: 1em;
+}
+
+.nav_link{
+	margin-bottom: 1em;
+	visited: blue;
+	color: blue;
+	text-decoration: none;
+}
+
+.nav_link:hover{
+	font-size: 1.2em;
+	-webkit-transform: scale(1.05);
+	-moz-transform: scale(1.05)
+}

@@ -13,10 +13,27 @@
 <script src="https://rawgit.com/abdmob/x2js/master/xml2json.min.js"></script>
 
 <!-- CSS -->
-<link rel="stylesheet" type="text/css" href="discourse.css">
+<link rel="stylesheet" type="text/css" href="css/discourse.css">
+<link rel="stylesheet" type="text/css" href="css/episode_card.css">
+<link rel="stylesheet" type="text/css" href="css/site_nav.css">
 
 </head>
 <body ng-app="discourse" ng-controller="discourse_rss">
-	<div ng-include="'body.html'"></div>
+
+
+	<img class='banner' src='images/discourseBanner2.png'/>
+	
+	<div class='leftColumn'>
+			<div ng-include="'pages/site_nav.html'"></div>
+		</div>
+
+		<div class='rightColumn'>
+			
+		</div>
+
+		<div class='centerColumn'>
+			<div ng-include="'pages/main.html'"></div>
+		</div>
+	
 </body>
 </html>
