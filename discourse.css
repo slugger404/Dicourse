@@ -2,13 +2,21 @@ body {
 	background-color: rgb(127, 127, 127);
 }
 
-.banner{
+.banner {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-.episodeNumber{
+.episodeGraphic {
+	width: 10em;
+	height: 10em;
+	float: right;
+	position: relative;
+	right: 28em;
+}
+
+.episodeNumber {
 	text-align: center;
 	display: block;
 	margin-left: auto;
@@ -18,52 +26,57 @@ body {
 	font-size: 2.1em;
 	font-weight: 900;
 	color: #9d0000;
-	
 }
 
-.episodeTitle{
+.episodeTitle {
 	margin-top: 5em;
 	font-weight: bold;
 	font-size: 1.5em;
-	font-style: italic;
 	text-decoration: underline;
 }
 
-.episodeHosts{
+.episodeHosts {
 	font-size: .8em;
 }
 
-audio:hover, audio:focus, audio:active
-{
--webkit-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
--moz-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
--webkit-transform: scale(1.05);
--moz-transform: scale(1.05);
-transform: scale(1.05);
+.episodeDescription {
+	position: relative;
+	left: 12em;	
+    margin-right: 12em;
+    top: .5em;
 }
 
-audio
-{
--webkit-transition:all 0.5s linear;
--moz-transition:all 0.5s linear;
--o-transition:all 0.5s linear;
-transition:all 0.5s linear;
--moz-box-shadow: 2px 2px 4px 0px #006773;
--webkit-box-shadow:  2px 2px 4px 0px #006773;
-box-shadow: 2px 2px 4px 0px #006773;
--moz-border-radius:7px 7px 7px 7px ;
--webkit-border-radius:7px 7px 7px 7px ;
-border-radius:7px 7px 7px 7px ;
+audio:hover, audio:focus, audio:active {
+	-webkit-box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
+	-moz-box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
+	box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
+	-webkit-transform: scale(1.05);
+	-moz-transform: scale(1.05);
+	transform: scale(1.05);
 }
 
+audio {
+	-webkit-transition: all 0.5s linear;
+	-moz-transition: all 0.5s linear;
+	-o-transition: all 0.5s linear;
+	transition: all 0.5s linear;
+	-moz-box-shadow: 2px 2px 4px 0px #006773;
+	-webkit-box-shadow: 2px 2px 4px 0px #006773;
+	box-shadow: 2px 2px 4px 0px #006773;
+	-moz-border-radius: 7px 7px 7px 7px;
+	-webkit-border-radius: 7px 7px 7px 7px;
+	border-radius: 7px 7px 7px 7px;
+	position: relative;
+	left: 13.5em;
+	bottom: 1em;
+}
 
 .card {
 	/* Add shadows to create the "card" effect */
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 	transition: 0.3s;
 	background-color: white;
-	width: 80%;
+	width: 50%;
 	border-radius: 1em;
 	display: block;
 	margin-left: auto;
@@ -79,4 +92,6 @@ border-radius:7px 7px 7px 7px ;
 /* Add some padding inside the card container */
 .container {
 	padding: 1em 2em;
+	padding-left: 1.5em;
+	min-height: 15em;
 }
