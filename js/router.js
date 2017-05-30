@@ -14,5 +14,7 @@ app.config([ '$routeProvider', function($routeProvider) {
 		templateUrl : "pages/main.html"
 	}).when("/hosts", {
 		templateUrl : "pages/hosts.html"
+	}).when("/Discourse/hosts", {
+		templateUrl : "pages/hosts.html"
 	});    
 }]);
