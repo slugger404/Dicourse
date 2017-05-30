@@ -1,6 +1,6 @@
 var app = angular.module('discourse', [ 'ngSanitize', 'ngRoute'])
 
-var NUMBER_OF_EPISODES_IN_RECENT = 5;
+var NUMBER_OF_EPISODES_IN_RECENT = 49;
 
 app.controller('discourse_rss', function($scope, $http) {
 
