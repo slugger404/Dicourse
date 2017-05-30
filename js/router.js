@@ -3,5 +3,7 @@ app.config([ '$routeProvider', function($routeProvider) {
 		templateUrl : "pages/main.html"
 	}).when("/hosts", {
 		templateUrl : "pages/hosts.html"
+	}).when("/all", {
+		templateUrl : "pages/all.html"
 	});    
 }]);
