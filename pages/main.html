@@ -1,44 +1,39 @@
+<div ng-repeat="episode in recentEpisodes">
 
-<div>
-	<div ng-repeat="episode in recentEpisodes">
-	
-		<span class='episodeNumber'>Episode {{episode.number}}</span>
-		
-		<div class='card'>
-			<div class='container'>
-				
-				<br />
-				
-				<!-- Title & Hosts -->
-				<div>					
-					<span class='episodeTitle'>{{episode.title}}</span>
-					<br/>
-					<span class='episodeHosts'>Released on {{episode.releaseDate | date: 'MM/dd/yyyy'}} with {{episode.subtitle}}</span>					
-				</div>
-				
-				<br />
-				
-				<!-- Graphic & Description -->
-				<div>
-					<img class='episodeGraphic' src='https://ssl-static.libsyn.com/p/assets/5/8/4/c/584cd42d8500ee02/58podcastIcon.png'/>								
-					<div class='episodeDescription' ng-bind-html="episode.description"/>
-					<br />
-				</div>
-				
-				
-				
-				
-			
-			
+	<span class='episodeNumber'>Episode {{episode.number}}</span>
+
+	<div class='card'>
+		<div class='container'>
+
+			<br />
+
+			<!-- Title & Hosts -->
+			<div>
+				<span class='episodeTitle'>{{episode.title}}</span> <br /> <span class='episodeHosts'>Released on {{episode.releaseDate | date: 'MM/dd/yyyy'}} with
+					{{episode.subtitle}}</span>
 			</div>
+
+			<br />
+
+			<!-- Graphic & Description -->
+			<div>
+				<img class='episodeGraphic' src='https://ssl-static.libsyn.com/p/assets/5/8/4/c/584cd42d8500ee02/58podcastIcon.png' />
+				<div class='episodeDescription' ng-bind-html="episode.description" />
+				<br />
+			</div>
+
+
+
+
+
+
 		</div>
-		
-			<audio controls='controls' class='episodeAudio'>
-					<source src="http://traffic.libsyn.com/discourseofhumanevents/Discourse{{episode.number}}.mp3" type="audio/ogg">
-					<source src="horse.mp3" type="audio/mpeg">
-					Your browser does not support the audio element.
-				</audio>
-		
 	</div>
-	
+
+	<audio controls='controls' class='episodeAudio'>
+		<source src="http://traffic.libsyn.com/discourseofhumanevents/Discourse{{episode.number}}.mp3" type="audio/mp3">
+		<a href='http://traffic.libsyn.com/discourseofhumanevents/Discourse{{episode.number}}.mp3'>Download</a>
+	</audio>
+
 </div>
+
