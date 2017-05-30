@@ -14,7 +14,6 @@
 	font-size: 2.1em;
 	font-weight: 900;
 	color: #9d0000;
-	text-decoration: underline;
 }
 
 .episodeTitle {
@@ -43,6 +42,13 @@ audio:hover, audio:focus, audio:active {
 	transform: scale(1.05);
 }
 
+.cardFooter{
+	font-size: .9em;
+	text-decoration: none;
+	margin: auto;
+	display: inline-block;
+}
+
 audio {
 	-webkit-transition: all 0.5s linear;
 	-moz-transition: all 0.5s linear;
@@ -53,10 +59,7 @@ audio {
 	box-shadow: 2px 2px 4px 0px #006773;
 	-moz-border-radius: 7px 7px 7px 7px;
 	-webkit-border-radius: 7px 7px 7px 7px;
-	border-radius: 7px 7px 7px 7px;
-	position: relative;
-	left: 13.5em;
-	bottom: 1em;
+	border-radius: 7px 7px 7px 7px;	
 }
 
 .card {
@@ -68,7 +71,7 @@ audio {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	margin-bottom: 1.5em;
+	margin-bottom: 2.5em;
 }
 
 /* On mouse-over, add a deeper shadow */

@@ -16,20 +16,23 @@
 			<br />
 
 			<!-- Graphic & Description -->
-			<img class='episodeGraphic' src='https://ssl-static.libsyn.com/p/assets/5/8/4/c/584cd42d8500ee02/58podcastIcon.png' /> <span class='episodeDescription'
-				ng-bind-html="episode.description" /> <br />
-
-
-
-
-
-
+			<img class='episodeGraphic' src='{{episode.pic}}' /> 
+			
+			<span  class='episodeDescription''>
+				<span ng-bind-html="episode.description" ></span> 
+				<br />			
+				<span class='cardFooter'>
+				<audio controls='controls' class='episodeAudio' preload='none'>
+					<source src="http://traffic.libsyn.com/discourseofhumanevents/Discourse{{episode.number}}.mp3" type="audio/mp3">
+				</audio>&nbsp;
+				<a href='http://traffic.libsyn.com/discourseofhumanevents/Discourse{{episode.number}}.mp3'>Download</a>
+			</span>
+			
+		</span>
+			
 		</div>
-
-		<audio controls='controls' class='episodeAudio' preload='none'>
-			<source src="http://traffic.libsyn.com/discourseofhumanevents/Discourse{{episode.number}}.mp3" type="audio/mp3">
-			<a href='http://traffic.libsyn.com/discourseofhumanevents/Discourse{{episode.number}}.mp3'>Download</a>
-		</audio>
+	
+		
 
 	</div>
 	<br/>

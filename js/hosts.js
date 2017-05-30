@@ -1,6 +1,6 @@
 function setupHosts($scope){
 	$scope.hosts = {};
-	var hostNames = ['Zach', 'Nick', 'Chloe', 'Cody', 'Kara', 'Harry', 'Cody']
+	var hostNames = ['Zach', 'Nick', 'Chloe', 'Cody', 'Kara', 'Harry', 'Cory']
 	
 	hostNames.forEach(function(name){
 		var host = {}
