@@ -10,6 +10,8 @@ app.config([ '$locationProvider', function($locationProvider) {
 app.config([ '$routeProvider', function($routeProvider) {
 	$routeProvider.when("/", {
 		templateUrl : "pages/main.html"
+	}).when("/Discourse/", {
+		templateUrl : "pages/main.html"
 	}).when("/hosts", {
 		templateUrl : "pages/hosts.html"
 	});    
