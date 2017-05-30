@@ -1,5 +1,6 @@
 .site_nav{
-	margin-top: 3.5em;
+	padding: 1.5em 0em 0em 0em;
+	margin-top: .5em;
 	margin-left: 2em;
 }
 
@@ -9,7 +10,6 @@
 	margin-left: auto;
 	margin-right: auto;
 	position: relative;
-	bottom: .8em;
 	font-size: 2.1em;
 	font-weight: 900;
 	color: #9d0000;
