@@ -5,8 +5,8 @@ var NUMBER_OF_EPISODES_IN_RECENT = 5;
 app.controller('discourse_rss', function($scope, $http) {
 
 	$http.get("https://discourseofhumanevents.libsyn.com/rss").then(function(response) {
-
-		convertXmlRssToJson(response, $scope);
+		setupHosts($scope);
+		convertXmlRssToJson(response, $scope);		
 		applyEpisodeAdjustments($scope);
 
 	});

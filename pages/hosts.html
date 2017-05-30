@@ -1,3 +1,21 @@
 <div ng-repeat="host in hosts">
-	{{host.name}} -- {{host.episodes.length}}
+	
+	<span class='episodeNumber'>{{host.name}}</span>
+	
+	
+	<div class='card'>
+		<div class='hostContainer'>
+
+			<!-- Title & Hosts -->
+			<span class='episodeTitle'>{{episode.title}}</span> <br /> <span class='episodeHosts'></span>
+
+			<!-- Graphic & Description -->
+			
+			<img class='episodeGraphic' src='{{host.pic}}' />
+			<div class='episodeDescription' ng-include="host.desc" />
+
+			
+		</div>
+	</div>
+	<span class='appearances'>{{host.name}} has appeared in {{host.episodes.length}} of {{episodes.length}} episodes. </span>
 </div>

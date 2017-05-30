@@ -4,36 +4,7 @@ function convertXmlRssToJson(response, $scope) {
 		$scope.rssJson = x2js.xml_str2json(xml);
 		$scope.episodes = $scope.rssJson.rss.channel.item;
 		$scope.recentEpisodes = [];
-		$scope.hosts = {
-		'Zach' : {
-			name: 'Zach',
-			episodes : []
-		},
-		'Nick' : {
-			name: 'Nick',
-			episodes : []
-		},
-		'Chloe' : {
-			name: 'Chloe',
-			episodes : []
-		},
-		'Cody' : {
-			name: 'Cody',
-			episodes : []
-		},
-		'Kara' : {
-			name: 'Kara',
-			episodes : []
-		},
-		'Harry' : {
-			name: 'Harry',
-			episodes : []
-		},
-		'Cory' : {
-			name: 'Cory',
-			episodes : []
-		}
-	};
+		$scope.numOfEpisdoes = 0;		
 	}
 
 	function applyEpisodeAdjustments($scope) {
@@ -43,12 +14,13 @@ function convertXmlRssToJson(response, $scope) {
 			//Most recent are at top of array
 			index = $scope.episodes.length - i - 1;
 			episode = $scope.episodes[index]
+			$scope.numOfEpisdoes++;
 			
 			applyEpisodeNumberAdjustment(episode);			 
 			addRecentEpisodesAdjustment($scope, episode, i, $scope.episodes.length);
 			stripBoilerPlateAdjustment(episode);
 			fixReleaseDateAdjustment(episode);
-			setupHosts($scope, episode);
+			addEpisdesToHosts($scope, episode);
 		}
 
 	}
@@ -76,7 +48,7 @@ function convertXmlRssToJson(response, $scope) {
 		
 	}
 	
-	function setupHosts($scope, episode){
+	function addEpisdesToHosts($scope, episode){
 		episode.subtitle = episode.subtitle.toString().replace('With', '')
 		episode.subtitle = episode.subtitle.toString().replace('and', '')
 		hosts = episode.subtitle.split(',');
