@@ -7,7 +7,7 @@ function setupHosts($scope){
 		$scope.hosts[name] = host;
 		host.name = name;
 		host.episodes = [];
-		host.desc = '/host_descriptions/' + name + '.html';
+		host.desc = 'host_descriptions/' + name + '.html';
 		host.pic = 'images/' + name + '.jpg';
 	});
 }
