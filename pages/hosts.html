@@ -7,16 +7,18 @@
 		<div class='hostContainer'>
 
 			<!-- Title & Hosts -->
-			<span class='episodeTitle'>{{episode.title}}</span> <br /> <span class='episodeHosts'></span>
+			<span class='episodeTitle'>{{episode.title}}</span>
+			<br /> 
+			<span class='episodeHosts'></span>
 
 			<!-- Graphic & Description -->
 			
 			<img class='episodeGraphic' src='{{host.pic}}' />
-			<div class='episodeDescription' ng-include="host.desc" />
+			<span class='episodeDescription' ng-include="host.desc"></span>
 
-						
+					
 		</div>
-		
+		<span class='appearances'>{{host.name}} has appeared in {{host.episodes.length}} of {{episodes.length}} episodes. </span>
 	</div>
-	<span class='appearances'>{{host.name}} has appeared in {{host.episodes.length}} of {{episodes.length}} episodes. </span>
+	
 </div>
