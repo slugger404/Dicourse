@@ -8,7 +8,9 @@ function convertXmlRssToJson(response, $scope) {
 	}
 
 	function applyEpisodeAdjustments($scope) {
-
+		
+		$scope.episodeMap = {};
+		
 		for (i = $scope.episodes.length - 1; i >= 0; i--) {
 			
 			//Most recent are at top of array
@@ -22,8 +24,17 @@ function convertXmlRssToJson(response, $scope) {
 			fixReleaseDateAdjustment(episode);
 			addEpisdesToHosts($scope, episode);
 			fixMissingImage(episode);
+			$scope.episodeMap[episode.number] = episode;
 		}
 
+	}
+	
+	function addFavorites($scope){
+		$scope.favoriteEpisodes = [];
+		TOP_EPISODES.forEach(function(episodeNum){
+			var ep = $scope.episodeMap[episodeNum];
+			$scope.favoriteEpisodes.push(ep);
+		});
 	}
 
 	function addRecentEpisodesAdjustment($scope, episode, episodeNumber, numberOfEpisodes) {

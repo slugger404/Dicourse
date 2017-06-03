@@ -7,5 +7,8 @@ app.config([ '$routeProvider', function($routeProvider) {
 	}).when("/all", {
 		templateUrl : "pages/main.html",
 		controller: 'discourse_rss'
+	}).when("/top", {
+		templateUrl : "pages/main.html",
+		controller: 'discourse_rss'
 	});
 }]);
