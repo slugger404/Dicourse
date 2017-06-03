@@ -21,6 +21,7 @@ function convertXmlRssToJson(response, $scope) {
 			stripBoilerPlateAdjustment(episode);
 			fixReleaseDateAdjustment(episode);
 			addEpisdesToHosts($scope, episode);
+			fixMissingImage(episode);
 		}
 
 	}
@@ -58,3 +59,10 @@ function convertXmlRssToJson(response, $scope) {
 			}
 		});
 	}
+	
+	function fixMissingImage(episode){
+		if(episode.pic==null){
+			episode.pic = 'https://ssl-static.libsyn.com/p/assets/f/a/3/e/fa3e1cd4261b080c/podcastIcon.png';
+		}
+	}
+	
