@@ -11,5 +11,8 @@ app.config([ '$routeProvider', function($routeProvider) {
 	}).when("/top", {
 		templateUrl : "pages/main.html",
 		controller: 'discourse_rss'
+	}).when("/about", {
+		templateUrl : "pages/about.html",
+		controller: 'discourse_rss'
 	});
 }]);
