@@ -1,8 +1,6 @@
 var app = angular.module('discourse', [ 'ngSanitize', 'ngRoute'])
 
-var NUMBER_OF_EPISODES_IN_RECENT = 5;
 
-var TOP_EPISODES = [43,11,51,52,25]
 
 var rssController = app.controller('discourse_rss', function($scope, $http, $location) {
 	
@@ -13,20 +11,17 @@ var rssController = app.controller('discourse_rss', function($scope, $http, $loc
 			applyEpisodeAdjustments($scope);
 			addFavorites($scope);
 			
-			episodeDisplay($scope);
+			configurePage($scope);
 		});
 	} else {
-		episodeDisplay($scope);
+		configurePage($scope);
 	}
 	
-	function episodeDisplay($scope){
-		if($location.path() == '/all'){
-			$scope.displayEpisodes = $scope.episodes;
-		} else if($location.path() == '/top'){
-			$scope.displayEpisodes = $scope.favoriteEpisodes;
-		} else {
-			$scope.displayEpisodes = $scope.recentEpisodes;
-		}
+	
+	function configurePage($scope){
+		var config = PAGE_CONFIG[$location.path()];
+		$scope.displayEpisodes = $scope[config['episodes']];
+		document.title = config['title']==null?PAGE_TITLE: SHORT_PAGE_TITLE + TITLE_DIVIDER + config['title'];
 	}
 
 });

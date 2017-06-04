@@ -3,7 +3,8 @@ app.config([ '$routeProvider', function($routeProvider) {
 		templateUrl : "pages/main.html",
 		controller: 'discourse_rss'
 	}).when("/hosts", {
-		templateUrl : "pages/hosts.html"
+		templateUrl : "pages/hosts.html",
+		controller: 'discourse_rss'
 	}).when("/all", {
 		templateUrl : "pages/main.html",
 		controller: 'discourse_rss'

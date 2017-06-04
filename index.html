@@ -1,5 +1,16 @@
-<html>
+<html  ng-controller="discourse_rss">
 <head>
+
+<!-- Meta Tags -->
+<title ng-bind='title'>Discourse of Human Events</title>
+<link rel="icon" href="http://discourseofhumanevents.com/images/favicon.ico" type="image/x-icon">
+<meta name="description"
+	content="Listen to people you don't know talk about crap you don't care about. The Discourse of Human Events is a podcast with no set agenda and a cast of
+	the borderline retarded.">
+<meta name="revisit-after" content="7 days">
+<meta name="distribution" content="global">
+<meta NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <!-- Angular JS Libraries -->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
@@ -7,14 +18,11 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
 
 <!-- Internal JS Libraries -->
+<script src="js/config.js"></script>
 <script src="js/hosts.js"></script>
 <script src="js/discourse.js"></script>
 <script src="js/router.js"></script>
 <script src="js/episode_adjustments.js"></script>
-
-
-
-
 
 <!-- Other External JS Libraries -->
 <script src="https://rawgit.com/abdmob/x2js/master/xml2json.min.js"></script>
@@ -27,7 +35,7 @@
 
 
 </head>
-<body ng-app="discourse" ng-controller="discourse_rss">
+<body ng-app="discourse">
 
 
 	<img class='banner' src='images/discourseBanner2.png'/>
