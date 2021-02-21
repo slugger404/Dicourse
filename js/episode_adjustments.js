@@ -44,7 +44,7 @@ function convertXmlRssToJson(response, $scope) {
 	}
 
 	function applyEpisodeNumberAdjustment(episode) {
-		var titleSplit = episode.title.split('-');
+		var titleSplit = episode.title;
 		episode.number = titleSplit[0].replace('DHE #','').trim();
 		episode.title = titleSplit[1].trim();
 	}
